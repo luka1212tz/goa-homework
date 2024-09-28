@@ -1,0 +1,10 @@
+div{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+}
