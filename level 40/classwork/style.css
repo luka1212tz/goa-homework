@@ -1,0 +1,8 @@
+div{
+    display: flex;
+    justify-content: left;
+    gap: 50px;
+    flex-direction: row;
+    
+    
+}
