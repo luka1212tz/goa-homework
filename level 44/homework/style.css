@@ -1,0 +1,42 @@
+
+#div1{
+    width: 100px;
+    height: 100px;
+    background-color: teal;
+}
+
+#div1:hover{
+    width: 300px;
+    border-radius: 50%;
+    transition:width 5s, border-radius 2s;
+}
+
+
+
+#div2{
+    width: 100px;
+    height: 100px;
+    background-color: teal;
+    border-radius: 50%;
+}
+
+#div2:hover{
+    height: 300px;
+    border-radius: 0;
+    transition:height 1s, border-radius 2s;
+}
+
+
+#div3{
+    width: 100px;
+    height: 100px;
+    background-color: teal;
+    
+}
+
+#div3:hover{
+    transform: rotate(90deg) scale(2);
+    background-color: sandybrown;
+    transition: background-color 2s,transform 1s;
+}
+
