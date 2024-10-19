@@ -29,5 +29,8 @@ for i in myself:
     print(myself[i])
 
 for i in mypc:
-    print(myself[i])
+    print(mypc[i])
+
+print("Keys:", list(mypc.keys()))
+
 
