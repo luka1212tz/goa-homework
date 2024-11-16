@@ -1,8 +1,6 @@
 
 #syntax error, name error, index error, type error, value error,
 
-from multiprocessing import Value
-from operator import truediv
 
 
 name1 = "luka"
