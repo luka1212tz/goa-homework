@@ -62,10 +62,10 @@ while int1 < 50:
     print(int1)
     int1 = int1 + 1
 
-input1 = int(input("input number"))
+#input1 = int(input("input number"))
 
-print(input1 / 3)
-print(input1 / 5)
+#print(input1 / 3)
+#print(input1 / 5)
 
 def find_average(numbers):
     if len(numbers) != 0:
@@ -76,3 +76,11 @@ def find_average(numbers):
 def square(listn):
     for i in listn:
         listn.append(i**2)
+
+
+num = 1
+
+while num <= 100:
+    if num < 50 or num > 60:
+        print(num)
+    num += 1
