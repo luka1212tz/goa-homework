@@ -88,3 +88,4 @@ function monthAndHalfYear() {
     console.log("მეორე ნახევარი/პირველი: " + halfOfYear);
 }
 
+
