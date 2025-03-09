@@ -55,5 +55,3 @@ console.log(student["gpa"]);
 
 console.log( hi = `${student.name} is ${student.age} years old, studies at the faculty of ${student.faculty}, is in year ${student.course}, and has an average GPA of ${student.gpa}.`);
 
-console.log(typeof hi );
-
