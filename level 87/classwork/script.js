@@ -10,13 +10,13 @@ function momxmarebeli(name, lastName, phoneNumber, email, password, confirmPassw
         return `ჩემი სახელია ${this.name}, ჩემი გვარია ${this.lastName}, ჩემი ტელეფონის ნომერია ${this.phoneNumber}, ჩემი ელფოსტაა ${this.email}.`;
     };
 }
-const momxmarebeli1 = new momxmarebeli ("ლუკა", "მოდებაძე", "13333124", "luka@gmail.com", "password1234", "password1234");
-const momxmarebeli2 = new momxmarebeli("ანა", "კობახიძე", "42421222", "ana@gmail.com", "password123", "password123");
-const momxmarebeli3 = new momxmarebeli("გიორგი", "ბერიძე", "1231231233", "giorgi@gmail.com", "password123", "password123")
+let momxmarebeli1 = new momxmarebeli ("ლუკა", "მოდებაძე", "13333124", "luka@gmail.com", "password1234", "password1234");
+let momxmarebeli2 = new momxmarebeli("ანა", "კობახიძე", "42421222", "ana@gmail.com", "password123", "password123");
+let momxmarebeli3 = new momxmarebeli("გიორგი", "ბერიძე", "1231231233", "giorgi@gmail.com", "password123", "password123")
 
 console.log(momxmarebeli1.info1());
 console.log(momxmarebeli2.info1());
-console.log(momxmarebeli13.info1());
+console.log(momxmarebeli3.info1());
 
 
 
