@@ -18,3 +18,11 @@ mixedArray[9] = ["grape", "orange"];
 
 
 console.log("Updated Array:", Array);
+
+let array1 = new Array(4,2,3)
+let array2 = new Array(3,2,3)
+let array3 = new Array(5,2,3)
+
+let array4 = [3,2,3]
+let array5 = [2,2,3]
+let array6 = [5,2,3]
