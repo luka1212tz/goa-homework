@@ -1,14 +1,5 @@
 
-function displayCurrentDateTime() {
-    const now = new Date();
-    const formatted = now.getFullYear() + '-' + 
-        String(now.getMonth() + 1).padStart(2, '0') + '-' + 
-        String(now.getDate()).padStart(2, '0') + ' ' + 
-        String(now.getHours()).padStart(2, '0') + ':' + 
-        String(now.getMinutes()).padStart(2, '0') + ':' + 
-        String(now.getSeconds()).padStart(2, '0');
-    return formatted;
-}
+
 
 
 function calculateAge(birthdateStr) {
@@ -39,10 +30,7 @@ function getDayOfWeek(dateStr) {
 }
 
 
-let counter = 0;
-setInterval(() => {
-    console.log('Timer: ', counter++);
-}, 1000);
+
 
 function updateTime() {
     const now = new Date();
@@ -51,11 +39,7 @@ function updateTime() {
                     `${now.getSeconds().toString().padStart(2, '0')}`;
     document.getElementById('timeDisplay').textContent = timeStr;
 }
-setInterval(updateTime, 1000);
 
-setInterval(() => {
-    console.log('Random:', Math.random());
-}, 1000);
 
 
 function showMessageAfterDelay(message, delay) {
@@ -65,17 +49,7 @@ function showMessageAfterDelay(message, delay) {
 }
 
 
-setTimeout(() => {
-    console.log('Hello, this is your delayed greeting!');
-}, 2000);
 
-function messageOne() { console.log('First message'); }
-function messageTwo() { console.log('Second message'); }
-function messageThree() { console.log('Third message'); }
-
-setTimeout(messageOne, 1000);
-setTimeout(messageTwo, 2000);
-setTimeout(messageThree, 3000);
 
 function updateGreeting() {
     const now = new Date();
