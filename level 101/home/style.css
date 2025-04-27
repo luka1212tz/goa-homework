@@ -1,0 +1,38 @@
+.highlight {
+    background-color: yellow;
+}
+
+.active {
+    border: 2px solid green;
+}
+
+.important {
+    font-weight: bold;
+}
+
+.red {
+    background-color: red;
+    color: white;
+}
+
+.blue {
+    background-color: blue;
+    color: white;
+}
+
+.class1 {
+    font-style: italic;
+}
+
+.class2 {
+    text-decoration: underline;
+}
+
+.class3 {
+    font-size: 20px;
+}
+
+#styledDiv {
+    padding: 10px;
+    margin: 10px 0;
+}
