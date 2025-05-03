@@ -1,0 +1,40 @@
+div{
+        width: 100px;
+        height: 100px;
+        transition: width 2s, height 0.5s;
+        background-color: blueviolet;
+}
+
+div:active{
+    width: 200px;
+    height: 200px;
+    
+}
+
+#div1{
+    width: 100px;
+    height: 100px;
+    transition: width 2s, background-color 1s, border-radius 5s;
+    background-color: blueviolet;
+}
+
+#div1:active{
+    width: 200px;
+    border-radius: 50%;
+    background-color: violet;
+
+}
+
+
+#div2{
+    width: 100px;
+    height: 100px;
+    transition: background-color 1s, transform 5s;
+    background-color: blueviolet;
+}
+
+#div2:active{
+    transform: translate(100px);
+    background-color: violet;
+
+}

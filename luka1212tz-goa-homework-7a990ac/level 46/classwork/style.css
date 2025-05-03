@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+div{
+    border:solid black;
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    animation-name: luka;
+    animation-duration: 2s;
+}
+
+@keyframes luka{
+    from{
+        transform: translate(0px);
+    }
+
+    to{
+        transform: translate(-300px);
+    }
+}
+
+#div1{
+    border:solid black;
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    animation-name: change;
+    animation-duration: 2s;
+    animation-iteration-count: 3;
+}
+
+@keyframes change{
+    from{
+        color: red;
+        scale:1;
+    }
+
+    to{
+        color: blue;
+        scale: 2;
+        rotate: 90deg;
+        border-radius: 50%;
+    }
+
+}
+
+#div2{
+    border:solid black;
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    animation-name: colorandscale;
+    animation-duration: 10s;
+    
+}
+
+@keyframes colorandscale{
+    0%{
+        color: red;
+        scale: 1;
+    }
+
+    25%{
+        color: orange;
+        scale: 1,2;
+    }
+
+    50%{
+        color: green;
+        scale: 1,4;
+    }
+
+    75%{
+        color: yellow;
+        scale: 1,6;
+    }
+
+    100%{
+        color: plum;
+        scale: 2;
+    }
+}

@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background: linear-gradient(145deg, #635df6, #937aff);
+    color: white;
+    width: 400px; /* Increased width for better proportions */
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.result h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.score {
+    font-size: 60px; /* Increased font size for emphasis */
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.score .of {
+    font-size: 18px; /* Adjusted for better visual balance */
+    display: block;
+    color: #dcdcdc;
+}
+
+.rating {
+    font-size: 22px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 14px;
+    color: #dcdcdc;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+.summary {
+    background-color: white;
+    color: #333;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+    margin-top: 20px;
+    text-align: left;
+}
+
+.summary h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.summary ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.summary ul li {
+    display: flex;
+    
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.summary ul li:last-child {
+    margin-bottom: 0;
+}
+
+button {
+    width: 100%;
+    padding: 12px; /* Slightly larger button */
+    background-color: #635df6;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #4d48c4;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Added hover effect */
+}

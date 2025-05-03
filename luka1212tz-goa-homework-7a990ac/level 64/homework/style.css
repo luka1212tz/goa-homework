@@ -1,0 +1,174 @@
+
+.static-box {
+    position: static;
+    background: lightgray;
+    padding: 20px;
+}
+
+.relative-box {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    background: lightcoral;
+    padding: 20px;
+}
+
+.absolute-box {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background: lightblue;
+    padding: 20px;
+}
+
+.fixed-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: lightgreen;
+    padding: 20px;
+    width: 100%;
+}
+
+.sticky-box {
+    position: sticky;
+    top: 10px;
+    background: lightyellow;
+    padding: 20px;
+}
+
+/* Background Image Examples */
+.background-cover {
+    background-image: url('image.jpg');
+    background-size: cover;
+    height: 200px;
+    margin: 10px 0;
+}
+
+.background-contain {
+    background-image: url('image.jpg');
+    background-size: contain;
+    height: 200px;
+    margin: 10px 0;
+}
+
+.background-fixed {
+    background-image: url('image.jpg');
+    background-attachment: fixed;
+    height: 200px;
+    margin: 10px 0;
+}
+
+.background-repeat {
+    background-image: url('image.jpg');
+    background-repeat: repeat;
+    height: 200px;
+    margin: 10px 0;
+}
+
+.background-position {
+    background-image: url('image.jpg');
+    background-position: center;
+    height: 200px;
+    margin: 10px 0;
+}
+
+
+.scale-box {
+    transform: scale(1.2);
+    background: lightpink;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.rotate-box {
+    transform: rotate(45deg);
+    background: lightblue;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.translate-box {
+    transform: translateX(20px);
+    background: lightgreen;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.skew-box {
+    transform: skewX(20deg);
+    background: lightgray;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.multiple-box {
+    transform: scale(1.2) rotate(30deg);
+    background: lightcoral;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+
+.transition-button {
+    background: lightblue;
+    border: none;
+    padding: 10px 20px;
+    transition: background 0.3s ease;
+}
+
+.transition-button:hover {
+    background: darkblue;
+    color: white;
+}
+
+
+.flex-container {
+    display: flex;
+    gap: 10px;
+    background: lightgray;
+    padding: 10px;
+}
+
+.flex-item {
+    background: lightblue;
+    padding: 20px;
+    flex: 1;
+}
+
+
+.animated-box {
+    width: 100px;
+    height: 100px;
+    background: lightcoral;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+.responsive-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.responsive-item {
+    background: lightblue;
+    flex: 1 1 calc(33.333% - 10px);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    .responsive-item {
+        flex: 1 1 100%;
+    }
+}

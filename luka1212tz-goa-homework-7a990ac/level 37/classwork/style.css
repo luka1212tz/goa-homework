@@ -1,0 +1,16 @@
+ul {
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+ul {
+    list-style: upper-roman;
+    list-style-position: inside;
+}
+
+div {
+    width: 500px;
+    height: 500px;
+    background-color:red;
+    border-radius: 200px 123px 133px 201px;
+}
