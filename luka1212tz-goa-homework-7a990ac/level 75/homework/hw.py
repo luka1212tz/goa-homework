@@ -1,1 +1,0 @@
-print("არ გვქონდა homework")
