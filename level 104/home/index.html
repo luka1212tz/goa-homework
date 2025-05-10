@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Game Slider</title>
+  <style>
+    body {
+      margin: 0;
+      background: #1e293b;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .slider {
+      position: relative;
+      width: 90%;
+      max-width: 600px;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    .slide {
+      display: none;
+    }
+    .slide.active {
+      display: block;
+    }
+    .slide img {
+      width: 100%;
+      display: block;
+    }
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.7);
+      border: none;
+      padding: 8px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    #prev { left: 10px; }
+    #next { right: 10px; }
+    .dots {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .dot {
+      height: 10px;
+      width: 10px;
+      margin: 0 4px;
+      background: #ccc;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .dot.active {
+      background: #3b82f6;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider" id="slider">
+    <div class="slide active"><img src="https://images.unsplash.com/photo-1611605698335-8d0d65cd50fd" alt="Game 1"></div>
+    <div class="slide"><img src="https://images.unsplash.com/photo-1598550894743-93485669c6d6" alt="Game 2"></div>
+    <div class="slide"><img src="https://images.unsplash.com/photo-1605902711622-cfb43c44367f" alt="Game 3"></div>
+    <button class="nav-btn" id="prev">⟨</button>
+    <button class="nav-btn" id="next">⟩</button>
+  </div>
+  <div class="dots" id="dots"></div>
+
+  <script>
+    let current = 0;
+    let slides = document.querySelectorAll('.slide');
+    let dotsContainer = document.getElementById('dots');
+    let interval;
+
+    function showSlide(i) {
+      for (let j = 0; j < slides.length; j++) {
+        slides[j].classList.remove('active');
+        dotsContainer.children[j].classList.remove('active');
+      }
+      slides[i].classList.add('active');
+      dotsContainer.children[i].classList.add('active');
+      current = i;
+    }
+
+    function nextSlide() {
+      showSlide((current + 1) % slides.length);
+    }
+
+    function prevSlide() {
+      showSlide((current - 1 + slides.length) % slides.length);
+    }
+
+    document.getElementById('next').onclick = nextSlide;
+    document.getElementById('prev').onclick = prevSlide;
+
+    for (let i = 0; i < slides.length; i++) {
+      let dot = document.createElement('span');
+      dot.className = 'dot';
+      if (i === 0) dot.classList.add('active');
+      dot.onclick = function () {
+        showSlide(i);
+      };
+      dotsContainer.appendChild(dot);
+    }
+
+    function start() {
+      interval = setInterval(nextSlide, 3000);
+    }
+    function stop() {
+      clearInterval(interval);
+    }
+
+    document.getElementById('slider').onmouseover = stop;
+    document.getElementById('slider').onmouseout = start;
+
+    start();
+  </script>
+</body>
+</html>
