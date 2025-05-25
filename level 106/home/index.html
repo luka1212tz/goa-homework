@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body.warning {
+      background-color: red;
+      color: white;
+    }
+    body.success {
+      background-color: lightgreen;
+      color: black;
+    }
+
+    section {
+      margin-bottom: 40px;
+      padding: 20px;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+    }
+
+    #outer {
+      background-color: #ddd;
+      padding: 30px;
+    }
+
+    #inner {
+      background-color: #aac;
+      padding: 20px;
+    }
+
+    ul li {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>სამი დავალება ერთ ფაილში</h1>
+
+  
+  <section>
+    <h2>რეგისტრაციის ფორმა</h2>
+    <form id="registerForm">
+      <input type="text" id="firstName" placeholder="სახელი"><br><br>
+      <input type="text" id="lastName" placeholder="გვარი"><br><br>
+      <input type="email" id="email" placeholder="ემაილი"><br><br>
+      <input type="password" id="password" placeholder="პაროლი"><br><br>
+      <input type="password" id="confirmPassword" placeholder="დაადასტურე პაროლი"><br><br>
+      <button type="submit">დარეგისტრირება</button>
+    </form>
+    <h3 id="message"></h3>
+  </section>
+
+  <section>
+    <h2>Event Propagation</h2>
+    <div id="outer">
+      Outer
+      <div id="inner">
+        Inner
+        <button id="button">Click Me</button>
+      </div>
+    </div>
+    <p>დააწკაპუნე ღილაკზე და უყურე კონსოლში ივენთების თანმიმდევრობას.</p>
+  </section>
+
+
+  <section>
+    <h2>სიის მაგალითი</h2>
+    <ul id="myList">
+      <li>ელემენტი 1</li>
+      <li>ელემენტი 2</li>
+      <li>ელემენტი 3</li>
+      <li>ელემენტი 4</li>
+    </ul>
+    <p>დააწკაპუნე ერთ-ერთ ელემენტზე და იხილე კონსოლში ტექსტი.</p>
+  </section>
+
+
+  
+</body>
+</html>

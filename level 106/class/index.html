@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>სამი დავალება</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    .warning {
+      background-color: red;
+      color: white;
+    }
+    .success {
+      background-color: lightgreen;
+      color: black;
+    }
+    section {
+      border: 2px solid #ccc;
+      padding: 15px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+    }
+    
+  </style>
+</head>
+<body>
+
+
+  <section>
+    <h2>დავალება 1: რეგისტრაციის ფორმა</h2>
+    <form id="registerForm">
+      <input type="text" id="firstName" placeholder="სახელი"><br><br>
+      <input type="text" id="lastName" placeholder="გვარი"><br><br>
+      <input type="email" id="email" placeholder="ემაილი"><br><br>
+      <input type="password" id="password" placeholder="პაროლი"><br><br>
+      <input type="password" id="confirmPassword" placeholder="დაადასტურე პაროლი"><br><br>
+      <button type="submit">დარეგისტრირება</button>
+    </form>
+    <h3 id="message"></h3>
+  </section>
+
+
+  <section>
+    <h2>დავალება 2: Event Propagation</h2>
+    <div id="outer" style="padding: 30px; background: lightgray;">
+      Outer
+      <div id="inner" style="padding: 20px; background: lightblue;">
+        Inner
+        <button id="button">Click Me</button>
+      </div>
+    </div>
+    <p>დააწკაპუნე ღილაკზე და დააკვირდი კონსოლში რა იბეჭდება</p>
+  </section>
+
+  <section>
+    <h2>დავალება 3: Event.target და სია</h2>
+    <ul id="myList">
+      <li>ელემენტი 1</li>
+      <li>ელემენტი 2</li>
+      <li>ელემენტი 3</li>
+      <li>ელემენტი 4</li>
+    </ul>
+    <p>დააწკაპუნე ერთ-ერთ ელემენტზე და კონსოლში იხილავ შედეგს</p>
+  </section>
+
+  <script src="./script.js"></script>
+ 
+</body>
+</html>
