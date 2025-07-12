@@ -1,52 +1,29 @@
 
-let name = "Luka";
-let age = 20;
+const person = { name: "Alice", age: 30, city: "New York" };
 
-let person = {
-  name,
-  age
+let { name, age } = person;
+
+console.log("Task 1:");
+console.log("Name:", name); 
+console.log("Age:", age);   
+
+
+
+let { name: userName, city: userCity } = person;
+
+console.log("\nTask 2:");
+console.log("Username:", userName);  
+console.log("User City:", userCity); 
+
+
+const student = {
+  name: "Bob",
+  age: 20,
+  grades: {
+    math: 90,
+    science: 85,
+    english: 92,
+  },
 };
 
-console.log("მაგალითი 1:", person); 
-
-
-let user = {
-  sayHello() {
-    console.log("მაგალითი 2: Hello!");
-  }
-};
-
-user.sayHello();
-
-
-let key = "score";
-
-let game = {
-  [key]: 100
-};
-
-console.log("მაგალითი 3:", game); 
-let title = "developer";
-let level = 3;
-
-let job = {
-  title,
-  level,
-  describe() {
-    console.log(`მაგალითი 4: Title: ${title}, Level: ${level}`);
-  }
-};
-
-job.describe(); 
-
-
-function createUser(username, email) {
-  return {
-    username,
-    email,
-    isActive: true,
-    login() {
-      console.log(`მაგალითი 5: ${username} logged in.`);
-    }
-  };
-}
+let { grades: { math, english } } = student;
