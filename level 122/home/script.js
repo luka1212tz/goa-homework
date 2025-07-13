@@ -8,3 +8,6 @@ function findSmallestInt(arr) {
 
 
 const solve = (x, y) => Math.floor(x / y);
+
+
+
