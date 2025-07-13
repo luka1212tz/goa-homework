@@ -38,28 +38,3 @@ let users1= [
 ];
 
 
-let allOrdersHaveItems = customerOrders.every(order => order.items.length > 0);
-console.log("All orders have items:", allOrdersHaveItems);
-
-
-let hasPendingDelivery = customerOrders.some(order => order.isDelivered === false);
-console.log("There is at least one pending delivery:", hasPendingDelivery);
-
-customerOrders.forEach(order => {
-  console.log(`Processing Order ID: ${order.orderId}`);
-
-  order.items.forEach(item => {
-    console.log(` - ${item.title} (Quantity: ${item.quantity})`);
-  });
-
- 
-  let allExpensive = order.items.every(item => item.price > 10);
-  console.log(`Order ${order.orderId} contains only expensive books: ${allExpensive}`);
-
-  let hasMultiple = order.items.some(item => item.quantity > 1);
-  console.log(`Order ${order.orderId} has multiple copies of at least one book: ${hasMultiple}`);
-});
-
-let formattedEmails = users.map(user => `<${user.email}>`);
-console.log("Formatted Emails:", formattedEmails);
-
