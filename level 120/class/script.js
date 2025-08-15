@@ -11,10 +11,6 @@ console.log("➡️ for...in მაგალითი:");
 for (let key in car) {
   console.log(key + ": " + car[key]);
 }
-// შედეგი:
-// brand: Toyota
-// model: Corolla
-// year: 2020
 
 
 
@@ -38,9 +34,9 @@ function greet(name = "მოწვეული") {
   console.log("გამარჯობა, " + name + "!");
 }
 
-console.log("\n➡️ Default Parameters მაგალითი:");
-greet("ლუკა");  // გამარჯობა, ლუკა!
-greet();        // გამარჯობა, მოწვეული!
+console.log(" Default Parameters მაგალითი:");
+greet("ლუკა");  
+greet();        
 
 
 
@@ -51,5 +47,5 @@ greet();        // გამარჯობა, მოწვეული!
 
 let square = (x) => x * x;
 
-console.log("\n➡️ Arrow Function მაგალითი:");
+console.log(" Arrow Function მაგალითი:");
 console.log("5-ის კვადრატი:", square(5)); // 25
