@@ -1,4 +1,3 @@
-
 let promise1 = new Promise((resolve, reject) => {
   resolve("Hello, Promise!");
 });
@@ -6,6 +5,8 @@ let promise1 = new Promise((resolve, reject) => {
 promise1
     .then(result => console.log('warmatebuli', result))
 
+
+    
 
 let errorPromise = new Promise((resolve, reject) => {
   reject("Something went wrong!");
@@ -15,6 +16,9 @@ errorPromise
     .catch(result => console.log('warumatebeli', result))
 
 
+
+
+
 let delayedPromise = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve("2 seconds have passed");
@@ -22,7 +26,9 @@ let delayedPromise = new Promise((resolve, reject) => {
 });
 
 delayedPromise
-    .then(result => console.log('warmatebuli', result))
+    .then(result => console.log('succsess', result))
+
+
 
 
 
@@ -40,6 +46,9 @@ randomPromise
   .catch(error => console.log(error));
 
 
+
+
+
 let chainPromise = new Promise((resolve, reject) => {
   resolve(5);
 });
@@ -49,7 +58,10 @@ chainPromise
   .then(num => num * 2)
   .then(num => num * 2)
   .then(result => console.log(result)); 
+ 
   
+
+
  let fetchData = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve("Data fetched!");
@@ -58,4 +70,6 @@ chainPromise
 
 fetchData
     .then(data => console.log(data));
+
+
 
