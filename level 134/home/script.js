@@ -1,100 +1,83 @@
-let promise1 = new Promise((resolve, reject) => {
-  resolve("status: ok code 200");
-});
 
-promise1
-    .then(result => console.log(result));
+let success1 = Promise.resolve(1);
+let success2 = Promise.resolve(2);
+let success3 = Promise.resolve(3);
 
-
-let promise2 = Promise.reject(("Custom failure!"));
-promise2
-    .catch(err => console.error( err.message));
+Promise.all([success1, success2, success3])
+  .then(results => console.log(results));
 
 
-function delay(ms) {
-  return new Promise(resolve => {
-    setTimeout(() => resolve(`Waited ${ms} ms`), ms);
-  });
-}
-delay(1500)
-    .then(msg => console.log(msg));
+let ok1 = Promise.resolve("A");
+let fail1 = Promise.reject("B failed");
+let ok2 = Promise.resolve("C");
+
+Promise.all([ok1, fail1, ok2])
+  .then(results => console.log(results))
+
+let fast = new Promise(resolve => setTimeout(() => resolve("Fast"), 100));
+let medium = new Promise(resolve => setTimeout(() => resolve("Medium"), 200));
+let slow = new Promise(resolve => setTimeout(() => resolve("Slow"), 300));
+
+Promise.race([fast, medium, slow])
+  .then(result => console.log( result));
 
 
-let promise4 = new Promise((resolve, reject) => {
-  if (Math.random() > 0.5) {
-    resolve("✅ Success");
-  } else {
-    reject("❌ Failure");
-  }
-});
-promise4
-  .then(result => console.log( result))
-  .catch(err => console.log( err));
+let delayed1 = new Promise(resolve => setTimeout(() => resolve("Resolved 1"), 200));
+let delayed2 = new Promise(resolve => setTimeout(() => resolve("Resolved 2"), 300));
+let immediateReject = Promise.reject("Immediate Failure");
+
+Promise.race([delayed1, delayed2, immediateReject])
+  .then(result => console.log(result))
+  .catch(error => console.error(error));
 
 
-let promise5 = new Promise((resolve, reject) => {
-  resolve(3);
-});
+let rejected1 = Promise.reject("Fail 1");
+let resolved = Promise.resolve("Success");
+let rejected2 = Promise.reject("Fail 2");
 
-
-promise5
-  .then(num => num + 2)     
-  .then(num => num * 4)      
-  .then(num => num - 5)      
+Promise.any([rejected1, resolved, rejected2])
   .then(result => console.log(result));
 
+let allFail1 = Promise.reject("Error 1");
+let allFail2 = Promise.reject("Error 2");
 
-function fetchUser(id) {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      resolve(`User ${id} data`);
-    }, 1500);
-  })
-}
-fetchUser(7).then(data => console.log( data));
+Promise.any([allFail1, allFail2])
+  .then(result => console.log(result))
+  .catch(error => console.error(error.message));
 
 
-let promise7 = new Promise((resolve, reject) => {
-  if(Math.random() > 0.5){
-    resolve("Success")
-  }else{
-    reject('failed')
-  }
-    
-  
-});
-promise7
-  .then(res => console.log( res))
-  .catch(err => console.log(err))
-  .finally(() => console.log("Cleanup complete"));
-
-
-let nested = new Promise(resolve => {
-  resolve(new Promise(innerResolve => {
-    innerResolve("Nested resolved!");
-  }));
-});
-nested.then(result => console.log( result));
+let s1 = Promise.resolve("A");
+let s2 = Promise.reject("B failed");
+let s3 = Promise.resolve("C");
+let s4 = Promise.reject("D failed");
+let s5 = Promise.resolve("E");
 
 
 
-
-function wait(ms) {
-  return new Promise(resolve => {
-    setTimeout(() => resolve(`Waited ${ms} ms`), ms);
+Promise.allSettled([
+  Promise.resolve(10),
+  Promise.reject("Oops"),
+  Promise.resolve(20),
+])
+  .then(results => {
+    let fulfilled = results.filter(r => r.status === "fulfilled")
+    console.log(fulfilled);
   });
-}
-wait(1000)
-.then(msg => console.log("#9:", msg));
-
-let p1 = new Promise(resolve => setTimeout(() => resolve("One"), 1000));
-let p2 = new Promise(resolve => setTimeout(() => resolve("Two"), 2000));
-let p3 = new Promise(resolve => setTimeout(() => resolve("Three"), 3000));
-p1
-  .then(results => console.log( results));
-p2
-  .then(results => console.log( results));
-p1
-  .then(results => console.log( results));
 
 
+Promise.allSettled([
+  Promise.resolve(1),
+  Promise.reject("fail 1"),
+  Promise.reject("fail 2"),
+])
+  .then(results => {
+    let failures = results.filter(r => r.status === "rejected").length;
+    console.log(failures);
+  });
+
+
+let nums = [1, 2, 3].map(n => Promise.resolve(n));
+
+Promise.all(nums)
+  .then(numbers => numbers.map(n => n * 2))
+  .then(doubled => console.log(numbers))

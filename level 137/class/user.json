@@ -1,0 +1,7 @@
+[
+  { "name": "luka",   "rank": 5, "active": true },
+  { "name": "daviti", "rank": 3, "active": false },
+  { "name": "nika",   "rank": 4, "active": true },
+  { "name": "gio",    "rank": 2, "active": false },
+  { "name": "andria", "rank": 1, "active": true }
+]

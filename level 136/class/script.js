@@ -1,29 +1,6 @@
-let promise1 = new Promise((resolve, reject) => {
-    setTimeout(() => resolve("წარმატებული"), 1000);
-});
-
-let promise2 = new Promise((resolve, reject) => {
-    setTimeout(() => reject("წარუმატებელი"), 500);
-});
-
-let promise3 = new Promise((resolve, reject) => {
-    setTimeout(() => resolve("წარმატებული"), 2000);
-});
-
-let promise4 = new Promise((resolve, reject) => {
-    setTimeout(() => resolve("წარმატებული"), 1500);
-});
-
-let promise5 = new Promise((resolve, reject) => {
-    setTimeout(() => reject("წარუმატებელი"), 800);
-});
-
-Promise.all([promise1, promise3, promise4]).then(results => console.log(results))
-    
-Promise.race([promise1, promise2, promise3, promise4, promise5]).then(result => console.log(result))
-
-
-Promise.any([promise2, promise5, promise3, promise1]).then(result => console.log(result))
-   
-
-Promise.allSettled([promise1, promise2, promise3, promise4, promise5]).then(results => console.log("Promise.allSettled:", results));
+//api შემოკლებული ფორმაა და ნიშნავს Application Programming Interface
+//api ძალიან გვეხმარება ვებსაიტის გასაკეთებლად მისი გამოყენებით შეგვიძლია შევამციროთ კოდის რაოდენობა ათასობით და მეტით
+//api არის მესენჯერი რომლის საშვალებითაც ორი პროგრამა ერთმანეს უკავშირდება და ინფრომაცია გადააქვთ
+//მაგალითად როცა ამინდის მონაცემები ჭირდება პროგრამას ის სთხოვს api სერვერს მოანცემებს და api უბრუნებს იმ მონაცემებს რაც ჭირდება ამიტომ პროგრამის შემქმნელს არ მოუწია თავისი ხელით გადმოეტანა ამინდის ინფორმაცია მის პროგრამაში
+//კარგი მხარეებია: მარტივი კომუნიკაცია პროგრამებს შორის, დროის დამზოგი  
+//ცუდი მხარეები: არარის უფასო სანდო და განვითარებuილი api, როცა api ვიყენებთ უფრო დიდი შანსია ჰაკერული შემოტევების 
