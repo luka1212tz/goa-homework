@@ -1,19 +1,27 @@
-let jsonstr = `
-[
-  { "name": "luka",   "rank": 5, "active": true },
-  { "name": "daviti", "rank": 3, "active": false },
-  { "name": "nika",   "rank": 4, "active": true },
-  { "name": "gio",    "rank": 2, "active": false },
-  { "name": "andria", "rank": 1, "active": true }
-]
-`
+fetch("https://jsonplaceholder.typicode.com/todos/1")
+  .then(response => response.json())
+  .then(data => {
+    console.log(data)
+  })
+  .catch(error => console.error(error));
 
-let newjsonstr = JSON.parse(jsonstr)
+fetch
+  .then(response => response.json)
 
-let actives = newjsonstr.filter(act => act.active)
 
-actives.sort((a, b) => b.rank - a.rank)
 
-actives[0].rank = actives[0].name + " (Rank 5) active";
-actives[1].rank = actives[1].name + " (Rank 4) active";
-actives[2].rank = actives[2].name + " (Rank 1) active";
+
+
+let city = "tokyo"  
+let API_KEY = "5faa8e189a4b974b5f1dd2556054e48f"
+let API_ENDPINT_LINK = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
+
+console.log(API_ENDPINT_LINK)
+
+
+fetch(API_ENDPINT_LINK)
+  .then(response => response.json())
+  .then(data => {
+    console.log(data)  
+  })
+  .catch(error => console.error(error));
