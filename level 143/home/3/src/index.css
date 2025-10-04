@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to bottom, #74ebd5, #a0e9ff);
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+  color: #004466;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+h2 {
+  color: #006699;
+  margin-top: 30px;
+  border-bottom: 2px solid #00aaff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+img {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 14px;
+  margin: 20px 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin: 10px 0 20px 0;
+}
+
+ul {
+  list-style-type: "🌊 ";
+  text-align: left;
+  margin: 10px auto 20px auto;
+  max-width: 500px;
+  font-size: 1rem;
+}
+
+section {
+  padding: 25px;
+  border-radius: 16px;
+  margin: 20px 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
