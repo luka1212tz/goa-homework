@@ -1,0 +1,70 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;     
+  background: #f2f2f2; 
+}
+
+
+.cards {
+  display: flex;
+  width: 900px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card {
+  flex: 1;
+  padding: 40px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.card.sedans {
+  background-color: #e28525;
+}
+
+.card.suvs {
+  background-color: #016972;
+}
+
+.card.luxury {
+  background-color: #00403f;
+}
+
+
+.card h2 {
+  margin: 0 0 20px 0;
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+
+.card p {
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.card button {
+  background: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  opacity: 0.8;
+}
