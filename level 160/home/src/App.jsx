@@ -2,7 +2,7 @@ export default function App() {
   return (
     <div className="card">
       <div className="card-top">
-        <img src="/music-illustration.png" alt="Illustration" />
+        <img alt="Illustration" />
       </div>
 
       <div className="card-body">
