@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  background: #111;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.container {
+  padding: 40px;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.card {
+  background: #1c1c1c;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+
+.card img {
+  height: 200px;
+  margin-bottom: 15px;
+}
+
+.price {
+  color: #ff4d4d;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+button {
+  background: transparent;
+  border: 1px solid white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
