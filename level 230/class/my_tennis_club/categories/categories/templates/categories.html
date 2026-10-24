@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Categories</title>
+</head>
+<body>
+
+    <h1>Categories</h1>
+
+    {% for category in categories %}
+        <p>
+            {{ category.category_id }}
+            {{ category.category_name }}
+            {{ category.description }}
+        </p>
+    {% endfor %}
+
+</body>
+</html>
