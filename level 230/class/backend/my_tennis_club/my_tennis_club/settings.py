@@ -1,3 +1,4 @@
+from pathlib import Path
 """
 Django settings for my_tennis_club project.
 
