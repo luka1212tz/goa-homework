@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 function App() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    const URL = "http://localhost:8000" + "/orders/";
+    const URL = "https://goa-homework-client-pkb5.vercel.app/" + "/orders/";
     const featch = async () => {
       const resp = await fetch(URL, {
         method: "GET",
